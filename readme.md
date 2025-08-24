@@ -1,4 +1,4 @@
- Audio Pattern Detection Project
+🎤 Audio Pattern Detection Project
 
 This project contains two Python applications for detecting repeated words or phrases in audio files using signal processing and machine learning techniques.
 
@@ -6,10 +6,10 @@ This project contains two Python applications for detecting repeated words or ph
 
     V2 (app_v2.py): A more advanced and robust approach using MFCCs and Dynamic Time Warping (DTW). This version is better at handling variations in speech (pitch, speed, and different speakers).
 
-Prerequisites
+🛑 Prerequisites
 
 Before you start, make sure you have Python 3 installed on your computer. You can check by opening your terminal or command prompt and typing python --version.
-Setup & Installation (The "No Excuses" Guide)
+🚀 Setup & Installation (The "No Excuses" Guide)
 
 Follow these steps exactly to avoid any errors.
 Step 1: Get the Code
@@ -44,7 +44,7 @@ Now, while the virtual environment is active, run this single command. It will r
 pip install -r requirements.txt
 
 Wait for it to finish. If you did this correctly, you will have zero dependency errors.
-How to Run the Apps
+▶️ How to Run the Apps
 
 Make sure your virtual environment is still active ((venv) is visible in your terminal).
 To Run the V1 App (Cross-Correlation):
@@ -56,7 +56,7 @@ To Run the V2 App (Advanced MFCC + DTW):
 streamlit run app_v2.py
 
 After running one of these commands, a new tab should automatically open in your web browser with the application running.
-How to Use the Apps
+🎧 How to Use the Apps
 
 The interface is simple:
 
