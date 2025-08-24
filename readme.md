@@ -1,73 +1,112 @@
-🎤 Audio Pattern Detection Project
 
-This project contains two Python applications for detecting repeated words or phrases in audio files using signal processing and machine learning techniques.
+---
 
-    V1 (app.py): A classic signal processing approach using Normalized Cross-Correlation. It's fast and great for finding exact matches.
+# Audio Pattern Detection Project
 
-    V2 (app_v2.py): A more advanced and robust approach using MFCCs and Dynamic Time Warping (DTW). This version is better at handling variations in speech (pitch, speed, and different speakers).
+This repository contains two Python applications for detecting repeated words or phrases in audio files. The project provides two different approaches: one based on classic signal processing and the other using machine learning techniques.
 
-🛑 Prerequisites
+### Versions
 
-Before you start, make sure you have Python 3 installed on your computer. You can check by opening your terminal or command prompt and typing python --version.
-🚀 Setup & Installation (The "No Excuses" Guide)
+* **V1 (app.py):**
+  Implements a traditional signal processing method using Normalized Cross-Correlation. This version is fast and effective for finding exact matches.
 
-Follow these steps exactly to avoid any errors.
-Step 1: Get the Code
+* **V2 (app\_v2.py):**
+  Uses MFCCs (Mel-Frequency Cepstral Coefficients) combined with Dynamic Time Warping (DTW). This approach is more robust and performs better when handling variations in speech, such as differences in pitch, speed, or speaker.
 
-Download all the project files and put them in a single folder on your computer.
-Step 2: Create a Virtual Environment
+---
 
-This is the most important step! It creates a clean, isolated space for this project so it doesn't mess with anything else on your computer.
+## Prerequisites
 
-Open your terminal or command prompt, navigate into your project folder, and run this command:
+* Python 3 installed on your system.
+  Verify installation with:
 
+  ```bash
+  python --version
+  ```
+
+---
+
+## Setup and Installation
+
+Follow the steps below to prepare and run the project:
+
+### Step 1: Download the Code
+
+Clone or download all project files and place them in a single directory.
+
+### Step 2: Create a Virtual Environment
+
+Create an isolated environment for the project:
+
+```bash
 python -m venv venv
+```
 
-This creates a new folder named venv in your project directory.
-Step 3: Activate the Virtual Environment
+This will create a folder named `venv` inside your project directory.
 
-You have to "turn on" the clean space you just created.
+### Step 3: Activate the Virtual Environment
 
-    On Windows:
+Activate the virtual environment before installing dependencies:
 
-    .\venv\Scripts\activate
+* **Windows:**
 
-    On Mac/Linux:
+  ```bash
+  .\venv\Scripts\activate
+  ```
+* **Mac/Linux:**
 
-    source venv/bin/activate
+  ```bash
+  source venv/bin/activate
+  ```
 
-You'll know it's working because you'll see (venv) appear at the start of your terminal prompt.
-Step 4: Install the Damn Libraries
+Once activated, `(venv)` will appear at the beginning of your terminal prompt.
 
-Now, while the virtual environment is active, run this single command. It will read the requirements.txt file and install everything you need automatically.
+### Step 4: Install Dependencies
 
+While the virtual environment is active, install all required libraries:
+
+```bash
 pip install -r requirements.txt
+```
 
-Wait for it to finish. If you did this correctly, you will have zero dependency errors.
-▶️ How to Run the Apps
+This will ensure all dependencies are properly installed.
 
-Make sure your virtual environment is still active ((venv) is visible in your terminal).
-To Run the V1 App (Cross-Correlation):
+---
 
-streamlit run app.py
+## Running the Applications
 
-To Run the V2 App (Advanced MFCC + DTW):
+Ensure your virtual environment is still active. Then, use the following commands:
 
-streamlit run app_v2.py
+* **To run V1 (Cross-Correlation):**
 
-After running one of these commands, a new tab should automatically open in your web browser with the application running.
-🎧 How to Use the Apps
+  ```bash
+  streamlit run app.py
+  ```
 
-The interface is simple:
+* **To run V2 (MFCC + DTW):**
 
-    Upload Files: Use the sidebar to upload your main song (the "Target") and the short audio clip you want to find (the "Template").
+  ```bash
+  streamlit run app_v2.py
+  ```
 
-        Pro Tip: For large target songs, it's best to use .mp3 files, as they are smaller and more browser-friendly.
+A new browser tab will automatically open with the application interface.
 
-    Tune Parameters: Use the sliders in the sidebar to adjust the detection settings.
+---
 
-    Analyze: Click the big "Analyze Audio" button.
+## Usage Instructions
 
-    View Results: The app will show you a plot with the detections marked and a list of the timestamps where the matches were found.
+1. **Upload Files:**
+   In the sidebar, upload the main audio file (the *Target*) and the shorter clip to be searched (the *Template*).
+   *Note:* For large audio files, `.mp3` format is recommended due to smaller file sizes and better browser compatibility.
 
-That's it. Now you have everything you need to share the project without the headache.
+2. **Adjust Parameters:**
+   Use the sidebar sliders to configure detection settings.
+
+3. **Run Analysis:**
+   Click the **Analyze Audio** button to process the input.
+
+4. **View Results:**
+   The app will display a plot with detected matches highlighted, along with a list of timestamps where the phrase or word occurs.
+
+---
+
